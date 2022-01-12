@@ -1,0 +1,25 @@
+---
+title: "My Map"
+author: "Jeff Shelley"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+# Basic Mapping Assignment 
+
+The Date this was written was January 11th, 2022.  The date *right now* is `r Sys.time()`
+
+```{r echo=FALSE}
+my_map <- leaflet() %>% 
+          addTiles() %>%
+          addMarkers(lat=41.5481055, lng=-90.5232075, 
+                     popup="Here Lies Twin State Technical Services, the greatest software shop in history")
+  
+my_map
+```
+
+
